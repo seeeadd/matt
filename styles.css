@@ -14,12 +14,13 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Roboto Condensed', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #1A1A1A;
     background-color: #F8F6F3;
     overflow-x: hidden;
+    font-weight: 400;
 }
 
 /* CSS VARIABLES - DESIGN SYSTEM */
@@ -186,28 +187,43 @@ body {
 
 /* TYPOGRAPHY */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    line-height: 1.2;
+    font-family: 'Bebas Neue', 'Impact', sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h1, h2 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+}
+
+h3, h4, h5, h6 {
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    font-weight: 600;
+    text-transform: none;
 }
 
 /* SECTION HEADLINES */
 .section-headline {
-    font-size: 52px;
-    font-weight: 800;
+    font-size: 56px;
+    font-weight: 400;
     color: var(--text-dark);
     text-align: center;
-    line-height: 1.2;
+    line-height: 1.1;
     margin-bottom: var(--m);
+    letter-spacing: 2px;
 }
 
 .section-subheadline {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 19px;
+    font-weight: 400;
     color: var(--secondary);
     text-align: center;
     max-width: 850px;
     margin: 0 auto var(--xl);
-    line-height: 1.6;
+    line-height: 1.7;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
 }
 
 /* BUTTONS */
@@ -222,9 +238,11 @@ h1, h2, h3, h4, h5, h6 {
             var(--primary-cta-dark) 100%
         );
     color: #FFFFFF;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    letter-spacing: 1.5px;
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
     border: none;
     border-radius: var(--radius-medium);
     cursor: pointer;
@@ -235,7 +253,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
     line-height: 64px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 3px 6px rgba(0,0,0,0.6);
     position: relative;
     overflow: hidden;
 }
@@ -250,11 +268,12 @@ h1, h2, h3, h4, h5, h6 {
     background: repeating-linear-gradient(
         90deg,
         transparent,
-        transparent 2px,
-        rgba(0,0,0,0.05) 2px,
-        rgba(0,0,0,0.05) 3px
+        transparent 3px,
+        rgba(0,0,0,0.03) 3px,
+        rgba(0,0,0,0.03) 4px
     );
     pointer-events: none;
+    z-index: 0;
 }
 
 .btn-primary:hover {
@@ -283,9 +302,11 @@ h1, h2, h3, h4, h5, h6 {
             var(--primary-cta-dark) 100%
         );
     color: #FFFFFF;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    letter-spacing: 1.5px;
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
     border: none;
     border-radius: var(--radius-medium);
     cursor: pointer;
@@ -294,7 +315,7 @@ h1, h2, h3, h4, h5, h6 {
         inset 0 1px 0 rgba(255,255,255,0.3),
         inset 0 -2px 0 rgba(0,0,0,0.2);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 3px 6px rgba(0,0,0,0.6);
     position: relative;
     overflow: hidden;
 }
@@ -309,11 +330,12 @@ h1, h2, h3, h4, h5, h6 {
     background: repeating-linear-gradient(
         90deg,
         transparent,
-        transparent 2px,
-        rgba(0,0,0,0.05) 2px,
-        rgba(0,0,0,0.05) 3px
+        transparent 3px,
+        rgba(0,0,0,0.03) 3px,
+        rgba(0,0,0,0.03) 4px
     );
     pointer-events: none;
+    z-index: 0;
 }
 
 .btn-primary-glow:hover {
@@ -334,8 +356,10 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary-oversized {
     width: 360px;
     height: 80px;
-    font-size: 22px;
-    font-weight: 800;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
     background:
         linear-gradient(135deg,
             var(--primary-cta) 0%,
@@ -353,11 +377,11 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     cursor: pointer;
     animation: pulse 2s ease-in-out infinite;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 4px 8px rgba(0,0,0,0.7);
     position: relative;
     overflow: hidden;
     display: inline-block;
-    letter-spacing: 0.5px;
+    letter-spacing: 2px;
     transition: all 0.3s ease;
 }
 
@@ -371,11 +395,12 @@ h1, h2, h3, h4, h5, h6 {
     background: repeating-linear-gradient(
         90deg,
         transparent,
-        transparent 2px,
-        rgba(0,0,0,0.05) 2px,
-        rgba(0,0,0,0.05) 3px
+        transparent 3px,
+        rgba(0,0,0,0.03) 3px,
+        rgba(0,0,0,0.03) 4px
     );
     pointer-events: none;
+    z-index: 0;
 }
 
 .btn-primary-oversized:hover {
@@ -444,12 +469,12 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     background-image:
-        radial-gradient(circle at 15% 25%, rgba(210, 180, 140, 0.08) 2px, transparent 2px),
-        radial-gradient(circle at 85% 75%, rgba(210, 180, 140, 0.06) 1.5px, transparent 1.5px),
-        radial-gradient(circle at 50% 50%, rgba(210, 180, 140, 0.05) 1px, transparent 1px);
+        radial-gradient(circle at 15% 25%, rgba(210, 180, 140, 0.04) 2px, transparent 2px),
+        radial-gradient(circle at 85% 75%, rgba(210, 180, 140, 0.03) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 50% 50%, rgba(210, 180, 140, 0.02) 1px, transparent 1px);
     background-size: 400px 400px, 350px 350px, 500px 500px;
     pointer-events: none;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 /* Announcement Bar */
@@ -516,12 +541,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-headline {
-    font-size: 72px;
-    font-weight: 800;
+    font-size: 76px;
+    font-weight: 400;
     color: var(--text-dark);
-    line-height: 1.15;
+    line-height: 1.05;
     max-width: 950px;
     margin: 0 auto var(--m);
+    font-family: 'Bebas Neue', 'Impact', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
 }
 
 .hero-subheadline {
@@ -588,7 +617,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #social-proof .section-headline {
     color: #FFFFFF;
-    font-size: 52px;
+    font-size: 56px;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
 }
 
 #social-proof .section-subheadline {
@@ -758,6 +788,7 @@ h1, h2, h3, h4, h5, h6 {
 #your-turn .section-headline {
     color: #FFFFFF;
     font-size: 56px;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.6);
 }
 
 .two-column-content {
@@ -849,8 +880,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     background-image:
-        radial-gradient(circle at 10% 20%, rgba(193, 154, 107, 0.03) 2px, transparent 2px),
-        radial-gradient(circle at 90% 80%, rgba(193, 154, 107, 0.02) 1.5px, transparent 1.5px);
+        radial-gradient(circle at 10% 20%, rgba(193, 154, 107, 0.015) 2px, transparent 2px),
+        radial-gradient(circle at 90% 80%, rgba(193, 154, 107, 0.01) 1.5px, transparent 1.5px);
     background-size: 500px 500px, 450px 450px;
     pointer-events: none;
 }
@@ -914,11 +945,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-card h3 {
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
     color: var(--text-dark);
     line-height: 1.3;
     margin-bottom: 12px;
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
 }
 
 .feature-card p {
@@ -996,11 +1028,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .step-card h3 {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 26px;
+    font-weight: 600;
     color: var(--text-dark);
     line-height: 1.3;
     margin-bottom: var(--s);
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
 }
 
 .step-card p {
@@ -1051,10 +1084,12 @@ h1, h2, h3, h4, h5, h6 {
 
 #system-breakdown .section-headline {
     color: #FFFFFF;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.6);
 }
 
 #system-breakdown .section-subheadline {
     color: #D0D0D0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .system-layout {
@@ -1240,8 +1275,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     background-image:
-        radial-gradient(circle at 25% 40%, rgba(193, 154, 107, 0.04) 2px, transparent 2px),
-        radial-gradient(circle at 75% 60%, rgba(193, 154, 107, 0.03) 1.5px, transparent 1.5px);
+        radial-gradient(circle at 25% 40%, rgba(193, 154, 107, 0.02) 2px, transparent 2px),
+        radial-gradient(circle at 75% 60%, rgba(193, 154, 107, 0.015) 1.5px, transparent 1.5px);
     background-size: 600px 600px, 550px 550px;
     pointer-events: none;
 }
@@ -1329,11 +1364,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bonus-card h3 {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 26px;
+    font-weight: 600;
     color: var(--text-dark);
     line-height: 1.3;
     margin-bottom: var(--s);
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
 }
 
 .bonus-card > p {
@@ -1445,11 +1481,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .avatar-card h3 {
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
     color: var(--text-dark);
     line-height: 1.3;
     margin-bottom: var(--s);
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
 }
 
 .avatar-card p {
@@ -1616,12 +1653,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .guarantee-headline {
-    font-size: 52px;
-    font-weight: 800;
+    font-size: 54px;
+    font-weight: 400;
+    font-family: 'Bebas Neue', 'Impact', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     color: var(--text-dark);
-    line-height: 1.2;
+    line-height: 1.1;
     text-align: center;
     margin-bottom: var(--m);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
 .guarantee-body {
@@ -1634,8 +1675,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .guarantee-subhead {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 26px;
+    font-weight: 600;
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
     color: var(--accent-blue);
     text-align: center;
     margin: 40px 0 var(--m);
@@ -1734,8 +1776,9 @@ h1, h2, h3, h4, h5, h6 {
 .faq-question {
     padding: 24px 60px 24px 24px;
     cursor: pointer;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 21px;
+    font-weight: 600;
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
     color: var(--text-dark);
     line-height: 1.4;
     position: relative;
@@ -1803,13 +1846,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .final-headline {
-    font-size: 64px;
-    font-weight: 800;
+    font-size: 68px;
+    font-weight: 400;
+    font-family: 'Bebas Neue', 'Impact', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     color: #FFFFFF;
     text-align: center;
-    line-height: 1.2;
+    line-height: 1.1;
     margin-bottom: var(--m);
-    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    text-shadow: 0 4px 12px rgba(0,0,0,0.7);
 }
 
 .period {
@@ -1819,11 +1865,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .final-subheadline {
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 400;
     color: #D0D0D0;
     text-align: center;
     max-width: 700px;
     margin: 0 auto var(--xl);
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
 /* ===================================
@@ -1979,7 +2027,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero-headline {
-        font-size: 40px;
+        font-size: 42px;
+        letter-spacing: 1px;
     }
 
     .highlight {
@@ -1989,6 +2038,22 @@ h1, h2, h3, h4, h5, h6 {
 
     .hero-subheadline {
         font-size: 18px;
+    }
+
+    .section-headline {
+        font-size: 38px;
+        letter-spacing: 1px;
+    }
+
+    .feature-card h3,
+    .step-card h3,
+    .bonus-card h3,
+    .avatar-card h3 {
+        font-size: 22px;
+    }
+
+    .faq-question {
+        font-size: 19px;
     }
 
     .video-placeholder {
@@ -2074,11 +2139,17 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .final-headline {
-        font-size: 40px;
+        font-size: 44px;
+        letter-spacing: 1px;
     }
 
     .period {
-        font-size: 48px;
+        font-size: 52px;
+    }
+
+    .guarantee-headline {
+        font-size: 38px;
+        letter-spacing: 1px;
     }
 
     .final-subheadline {
